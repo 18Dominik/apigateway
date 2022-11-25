@@ -1,24 +1,4 @@
-/* //import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-import org.springframework.web.bind.annotation.PostMapping;
-
-
-@RestController
-public class AdditionController 
-{
-
-	
-	@PostMapping("/index")
-	public String addForm(Input input)
-	{
-		return Integer.toString(input.getNum1()+input.getNum2());
-	}
-} */
-
-
+package de.dzbank.innovation;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;

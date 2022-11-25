@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+        <meta charset="ISO-8859-1">
+        <title>Insert title here</title>
+ 
+        <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css rel="stylesheet">
 </head>
 <body>
-		<h1>Result</h1>
-		<p th:text="${calc1.Total()}"></p>
+        <div class="container">
+               <div class="row">
+                       <button id="add" class="float-left submit-button" >Add</button>
+ 
+                       <script type="text/javascript">
+               document.getElementById("add").onclick = function () {
+               location.href = "/add.html"; //relative path (https://www.w3schools.com/html/html_filepaths.asp). If running on local VM: http://localhost:8080/add.html
+               };
+</script>
+                       <button id="sub" class="float-left submit-button" >Subtract</button>
+ 
+                       <script type="text/javascript">
+                       document.getElementById("sub").onclick = function () {
+                       location.href = "/sub.html"; //relative path (https://www.w3schools.com/html/html_filepaths.asp). If running on local VM: http://localhost:8080/sub.html
+                       };
+                       </script>
+               </div>
+        </div>
 </body>
 </html>

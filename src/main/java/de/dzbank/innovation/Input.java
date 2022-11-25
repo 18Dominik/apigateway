@@ -1,3 +1,5 @@
+package de.dzbank.innovation;
+
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;

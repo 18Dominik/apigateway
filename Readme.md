@@ -158,12 +158,12 @@ open in browser
 - with kong api gateway: http://localhost:8000/home
 
 ### docker container
-Since the app consists out of java app and a postgres-database, `docker network` is is used to containerize application. 
+Since the app consists out of java app and a postgres-database, `docker network` is used to containerize application. 
 Here is a nice tutorial: https://www.youtube.com/watch?v=S2s28PCg4M4
 1.	create network: `docker network create mynetwork`
 2.	Start postgres database connected with network: `docker run --name postgres-net --network mynetwork -e POSTGRES_PASSWORD=0 -p 5432:5432 -d postgres`
 3.	change url in application.properties and adjust for postgres database container: `quarkus.datasource.jdbc.url=jdbc:postgresql://postgres-net/postgres`
-4.	build jar-file: `mvn clean install`
+4.	build jar-file: `mvn clean install` or `mvn clean package`
 5.	Build docker image based on docker file: `docker build -t quarkuspostgres .`
 6.	Run container for java app: `docker run --network mynetwork --name quarkuspostgres-container -p 8080:8080 -d quarkuspostgres`
 

@@ -261,12 +261,12 @@ curl -i http://localhost:8000/home \
 ```
 
  ### Reset
-- Delete API Key on Consumer: curl -X DELETE "http://localhost:8001/consumers/dominik/key-auth/{id}"
-- Delete Consumer: curl -X DELETE "http://localhost:8001/consumers/{id}"
-- Delete API Key Plugin: curl -X DELETE "http://localhost:8001/plugins/{id}"
-- Delete API Rate Limit Plugin: curl -X DELETE "http://localhost:8001/plugins/{id}"
-- Delete Route: curl -X DELETE "http://localhost:8001/routes/{id}"
-- Delete Service: curl -X DELETE "http://localhost:8001/services/{id}"
+- ```Delete API Key on Consumer: curl -X DELETE "http://localhost:8001/consumers/dominik/key-auth/{id}"```
+- ```Delete Consumer: curl -X DELETE "http://localhost:8001/consumers/{id}" ```
+- ``` Delete API Key Plugin: curl -X DELETE "http://localhost:8001/plugins/{id}" ```
+- ``` Delete API Rate Limit Plugin: curl -X DELETE "http://localhost:8001/plugins/{id}" ```
+- ``` Delete Route: curl -X DELETE "http://localhost:8001/routes/{id}" ```
+- ``` Delete Service: curl -X DELETE "http://localhost:8001/services/{id}" ```
 
 ## Example to set up Addition feature via Kong services and routes
 ### Set up homepage: Decide whether you want to add or subtract

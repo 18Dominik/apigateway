@@ -224,6 +224,7 @@ curl -X POST http://localhost:8001/services/calc_service/plugins \
 ### Secure Service: API Key Authentication on Route
 
 #### 1. Set up key authentication plugin:
+
 ```
 curl -i -X POST http://localhost:8001/routes/Home/plugins \
   --data name=key-auth
@@ -253,6 +254,7 @@ curl -i -X POST http://localhost:8001/consumers/dominik/key-auth \
 `curl -X GET "http://localhost:8001/consumers/dominik/key-auth"`
   
 #### 4. Open URL:
+The beauty of an API key is that you can just add it as a query parameter in the URL or header and you’re done (compared to utilizing an API Token)
 Browser: `http://localhost:8000/home?apikey=meinapikey`
 cURL: 
 ```
@@ -289,5 +291,7 @@ curl -i http://localhost:8000/home \
 OWASP API Security Project
 https://owasp.org/www-project-api-security/
 https://juice-shop.herokuapp.com/#/
+
+This insightful article why you should API keys with caution: https://thenewstack.io/why-your-api-keys-are-leaving-you-vulnerable-to-attack/
 
 Most of the top security risks can be covered by API Gateways, although not all.
